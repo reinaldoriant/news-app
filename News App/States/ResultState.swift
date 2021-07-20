@@ -7,6 +7,10 @@
 
 import Foundation
 
+//MARK: - resultstate
+/**
+  Digunakan untuk menampilkan result dari api
+ ***/
 enum ResultState {
     case loading
     case success(content: [Article])
