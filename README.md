@@ -24,6 +24,5 @@
 
 - use swiftui 2.0 with Combine
 - using SwiftUI MVVM
-- interact with an API to get our newsfeed
 - use SPM(Swift Package Manager)
 - use API from (https://lil.software/api/)
