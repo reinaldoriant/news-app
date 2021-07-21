@@ -37,6 +37,6 @@ extension Article {
             title: "Summer hotspot Provincetown issues face mask advisory after new COVID outbreak - New York Post ",
             articleDescription: "A coronavirus outbreak linked to a Cape Cod summer vacation hotspot prompted local health officials on Monday to institute a new mask advisory, a report said.",
             image: "https://nypost.com/wp-content/uploads/sites/2/2021/07/provincetown-mask-covid-729.jpg?quality=90&strip=all&w=1200",
-            date: "2021-07-20T03:55:00Z"
+            date: Date())
     }
 }

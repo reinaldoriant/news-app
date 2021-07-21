@@ -20,6 +20,7 @@
 		A567263A26A718FF00FBAD9A /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = A567263926A718FF00FBAD9A /* URLImageStore */; };
 		A567263C26A718FF00FBAD9A /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = A567263B26A718FF00FBAD9A /* URLImage */; };
 		A567263E26A7191E00FBAD9A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567263D26A7191E00FBAD9A /* ArticleView.swift */; };
+		A567264026A7A75800FBAD9A /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567263F26A7A75800FBAD9A /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A567263326A7077A00FBAD9A /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		A567263626A70F3700FBAD9A /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		A567263D26A7191E00FBAD9A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		A567263F26A7A75800FBAD9A /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				A567262426A6D06E00FBAD9A /* HomeView.swift */,
 				A567263D26A7191E00FBAD9A /* ArticleView.swift */,
+				A567263F26A7A75800FBAD9A /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				A567262526A6D06E00FBAD9A /* HomeView.swift in Sources */,
 				A567261526A6CE1000FBAD9A /* News_AppApp.swift in Sources */,
 				A567262B26A6D36900FBAD9A /* NewsEndPoint.swift in Sources */,
+				A567264026A7A75800FBAD9A /* ErrorView.swift in Sources */,
 				A567262E26A6E9E700FBAD9A /* APIError.swift in Sources */,
 				A567262826A6D24700FBAD9A /* NewsResponse.swift in Sources */,
 				A567263E26A7191E00FBAD9A /* ArticleView.swift in Sources */,

@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import URLImage
+import URLImageStore
 
 @main
 struct News_AppApp: App {
     var body: some Scene {
-        WindowGroup {
+        let urlImageService = URLImageService(fileStore: URLImageFileStore(),
+                                              inMemoryStore: URLImageInMemoryStore())
+        return WindowGroup {
             HomeView()
+                .environment(\.urlImageService, urlImageService)
         }
     }
 }
