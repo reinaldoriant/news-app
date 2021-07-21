@@ -19,7 +19,7 @@ protocol NewsService {
 
 struct  NewsServiceImpl: NewsService {
     func request(from endpoint: NewsAPI) -> AnyPublisher<NewsResponse, APIError>{
-        
+        let dataKu = endpoint.urlRequest
         return URLSession
             .shared //untuk shared url session pada sebuah singleton
             .dataTaskPublisher(for: endpoint.urlRequest) // untuk mendapatkan data publisher
@@ -32,6 +32,7 @@ struct  NewsServiceImpl: NewsService {
                     return Fail(error: APIError.unknown).eraseToAnyPublisher()
                 }
                 
+                print("Apa responsenya? \(dataKu)")
                 if(200...299).contains(response.statusCode){
                   
                     let jsonDcoder = JSONDecoder()
@@ -45,7 +46,7 @@ struct  NewsServiceImpl: NewsService {
                         .eraseToAnyPublisher()
                 }
                 else{
-                    return Fail(error: APIError.unknown).eraseToAnyPublisher()
+                    return Fail(error: APIError.errorCode(response.statusCode)).eraseToAnyPublisher()
                 }
                 
             }//Mapping response nya

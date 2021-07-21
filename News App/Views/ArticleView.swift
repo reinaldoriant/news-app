@@ -15,7 +15,7 @@ struct ArticleView: View {
     
     var body: some View {
         HStack {
-            if let imgurl = article.image,
+            if let imgurl = article.urlToImage,
                let url = URL(string: imgurl){
                 URLImage(url,
                          failure:{ error, _ in
@@ -28,17 +28,18 @@ struct ArticleView: View {
                          })
                     .frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                     .cornerRadius(10)
-                
+
             }
             else{
                 PlaceHolderImageView()
             }
+
             
             VStack(alignment: .leading, spacing: 4){
-                Text(article.title ?? "")
+                Text(article.title )
                     .foregroundColor(.black)
                     .font(.system(size: 18, weight: .semibold))
-                Text(article.source ?? "N/A")
+                Text(article.articleDescription ?? "" )
                     .foregroundColor(.gray)
                     .font(.footnote)
             }

@@ -44,6 +44,7 @@ class NewsViewModelImpl: ObservableObject,NewsViewModel {
                 }
             } receiveValue: { response in
                 self.articles = response.articles
+                print("Response di sini apa \(response)")
             }
         self.cancellables.insert(cancellable)
     }

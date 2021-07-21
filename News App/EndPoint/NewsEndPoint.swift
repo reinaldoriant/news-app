@@ -22,25 +22,35 @@ protocol APIBuilder {
 enum NewsAPI {
     case getNews
 }
- //MARK: - api builder
-extension NewsAPI: APIBuilder {
 
+var id = "2166f40b9b6848ce82773c43d10fed08"
+
+//MARK: - api builder
+extension NewsAPI: APIBuilder {
+    
     //req api
     var urlRequest: URLRequest {
-        return URLRequest(url: self.baseUrl.appendingPathComponent(self.path))
-        
+        var urlComponents = URLComponents(string: self.baseUrl.appendingPathComponent(self.path).absoluteString)
+        urlComponents?.queryItems = [
+            URLQueryItem(name: "country", value: "us"),
+            URLQueryItem(name: "category", value: "business"),
+            URLQueryItem(name: "apiKey", value: "2166f40b9b6848ce82773c43d10fed08")
+        ]
+        print("idnya apa \(id)")
+        print("nilainya apa \(urlComponents!)")
+        return URLRequest(url: (urlComponents?.url!)!)
     }
     // get data from api web
     var baseUrl: URL {
         switch self {
         case .getNews:
-          return URL(string: "https://api.lil.software")!
+            return URL(string:"https://private-58689-kompasdev1.apiary-mock.com")!
         }
     }
     
     //this is end of api what we need to access
     var path: String {
-        return "/news"
+        return "/v2/top-headlines"
     }
     
     
