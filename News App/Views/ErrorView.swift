@@ -8,7 +8,17 @@
 import SwiftUI
 
 struct ErrorView: View {
+    
+    
+    typealias ErrorViewActionHandler = () -> Void
+    
     let error: Error
+    let handler: ErrorViewActionHandler
+    
+    internal init(error: Error, handler: @escaping ErrorView.ErrorViewActionHandler) {
+        self.error = error
+        self.handler = handler
+    }
     
     var body: some View {
         VStack {
@@ -25,7 +35,9 @@ struct ErrorView: View {
                 .font(.system(size: 15))
                 .multilineTextAlignment(.center)
                 .padding(.vertical,4)
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {
+                handler()
+            }, label: {
                 Text("Retry")
             })
             .padding(.vertical,12)
@@ -41,7 +53,7 @@ struct ErrorView: View {
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(error: APIError.decodingError)
+        ErrorView(error: APIError.decodingError) {}
             .previewLayout(.sizeThatFits)
     }
 }
