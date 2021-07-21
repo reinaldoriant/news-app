@@ -22,7 +22,9 @@
 
 ## Technologies :
 
-- use swiftui 2.0 with Combine
+- use swiftui 2.0 
 - using SwiftUI MVVM
 - use SPM(Swift Package Manager)
-- use API from (https://lil.software/api/)
+- use combine
+- use URL-Image 
+- use API from (https://newsapi.org/)
