@@ -44,7 +44,7 @@ extension NewsAPI: APIBuilder {
     var baseUrl: URL {
         switch self {
         case .getNews:
-            return URL(string:"https://private-58689-kompasdev1.apiary-mock.com")!
+            return URL(string:"https://newsapi.org")!
         }
     }
     
